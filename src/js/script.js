@@ -42,7 +42,7 @@ function padString(value, length, char, appendSide = false) {
     return value;
 }
 
-// console.log(padString());
+
 console.log(padString(111, 12));
 console.log(padString('привіт', 8, '*'));
 console.log(padString('привіт', 7, '*', true));
