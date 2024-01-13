@@ -4,8 +4,8 @@ function calculatePotatoKgForBorscht(litersOfBorscht) {
     const potatoPerLiter = 4;
     const onePotatoInGrams = 75;
 
-    let potatoWeightPerLiters = onePotatoInGrams * potatoPerLiter;
-    let totalWeightPotato = +litersOfBorscht * potatoWeightPerLiters;
+    const potatoWeightPerLiters = onePotatoInGrams * potatoPerLiter;
+    const totalWeightPotato = +litersOfBorscht * potatoWeightPerLiters;
     return Math.ceil(totalWeightPotato / 1000);
 }
 
