@@ -9,10 +9,12 @@ console.log(firstString + ' ' + secondString + ' ' + thirdString);
 
 //2
 const number = 55555;
-let numToString = number.toString();
+const numToString = number.toString();
 let result = '';
 
 for (let i = 0; i < numToString.length; i++) {
  	result = result + numToString[i] + ' ';
  }
  console.log(result);
+
+
