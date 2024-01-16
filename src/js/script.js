@@ -1,7 +1,7 @@
 'use strict';
 
-let age = +prompt('Ваш вік?');
-let inRange = !(isNaN(age) || age > 130 || age <= 0);
+const age = +prompt('Ваш вік?');
+const inRange = !(isNaN(age) || age > 130 || age <= 0);
 
 if (inRange) {
     let suffix = 'років';
