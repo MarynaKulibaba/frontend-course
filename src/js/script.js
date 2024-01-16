@@ -10,10 +10,10 @@ const isInteger = (value) =>
 // За допомогою тернарного оператора порівняйте їх і якщо x більше за y,
 // то виведіть фразу: «x більше за y», інакше виведіть фразу: «x не більше, ніж y».
 
-let x = 10;
-let y = 7;
+const x = 10;
+const y = 7;
 
-let result = x > y ? 'x більше за y' : 'x не більше, ніж y';
+const result = x > y ? 'x більше за y' : 'x не більше, ніж y';
 alert(result);
 
 // 2.
@@ -27,7 +27,7 @@ alert(result);
 // Достатньо буде визначити, чи є число однозначним, двоцифровим або трицифровим і більше.
 // Щоб дізнатися довжину рядка, яку ввів користувач у prompt, потрібно використовувати.
 
-let inputNumber = prompt('Enter a number');
+const inputNumber = prompt('Enter a number');
 if (isInteger(inputNumber)) {
     const sign = +inputNumber >= 0 ? 'позитивне' : 'негативне';
     let message = '';
@@ -57,27 +57,27 @@ if (isInteger(inputNumber)) {
 // Визначити яке з трьох, введених користувачем, чисел максимальне та вивести його на екран.Користувач вводить по черзі через prompt числа.
 // Використовуючи конструкцію if..else, напишіть код, який повинен визначати, яке із введених чисел є найбільшим.
 
-let firstInputNumber = prompt('Enter first number');
-let secondInputNumber = isNumber(firstInputNumber)
+const firstInputNumber = prompt('Enter first number');
+const secondInputNumber = isNumber(firstInputNumber)
     ? prompt('Enter second number')
     : null;
-let thirdInputNumber = isNumber(secondInputNumber)
+const thirdInputNumber = isNumber(secondInputNumber)
     ? prompt('Enter third number')
     : null;
 
 if (isNumber(thirdInputNumber)) {
-    firstInputNumber = +firstInputNumber;
-    secondInputNumber = +secondInputNumber;
-    thirdInputNumber = +thirdInputNumber;
+	const firstNumber =  +firstInputNumber;
+	const secondNumber = +secondInputNumber;
+    const thirdNumber = +thirdInputNumber;
 
     if (
-        firstInputNumber > secondInputNumber &&
-        firstInputNumber > thirdInputNumber
+        firstNumber > secondNumber &&
+        firstNumber > thirdNumber
     ) {
         console.log('перше число');
     } else if (
-        secondInputNumber > thirdInputNumber &&
-        secondInputNumber > firstInputNumber
+        secondNumber > thirdNumber &&
+        secondNumber > firstNumber
     ) {
         console.log('друге число');
     } else {
@@ -94,25 +94,25 @@ if (isNumber(thirdInputNumber)) {
 // Т. е. потрібно порівняти суми двох будь-яких сторін з третьою стороною, що залишилася.
 // Щоб трикутник існував, сума завжди має бути більшою за окрему сторону.
 
-let firstSideTriangle = prompt('Enter first side');
-let secondSideTriangle = isPositiveNumber(firstSideTriangle)
+const firstSideTriangle = prompt('Enter first side');
+const secondSideTriangle = isPositiveNumber(firstSideTriangle)
     ? prompt('Enter second side')
     : null;
-let thirdSideTriangle = isPositiveNumber(secondSideTriangle)
+const thirdSideTriangle = isPositiveNumber(secondSideTriangle)
     ? prompt('Enter third side')
     : null;
 
 if (isPositiveNumber(thirdSideTriangle)) {
-    firstSideTriangle = +firstSideTriangle;
-    secondSideTriangle = +secondSideTriangle;
-    thirdSideTriangle = +thirdSideTriangle;
+	const firstSide = +firstSideTriangle;
+	const secondSide = +secondSideTriangle;
+	const thirdSide = +thirdSideTriangle;
 
     let isPossible = false;
-    if (firstSideTriangle + secondSideTriangle > thirdSideTriangle) {
+    if (firstSide + secondSide > thirdSide) {
         isPossible = true;
-    } else if (firstSideTriangle + thirdSideTriangle > secondSideTriangle) {
+    } else if (firstSide + thirdSide > secondSide) {
         isPossible = true;
-    } else if (secondSideTriangle + thirdSideTriangle > firstSideTriangle) {
+    } else if (secondSide + thirdSide > firstSide) {
         isPossible = true;
     }
     console.log(isPossible ? 'Triangle is possible' : 'Triangle is not possible');
