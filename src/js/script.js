@@ -4,17 +4,17 @@ const userInputNumber = prompt('Enter a number');
 const userInputPow = userInputNumber != null ? prompt('Enter pow') : null;
 
 function displayPowNumber(num, pow = 1) {
-    num = parseInt(num, 10);
-    pow = parseInt(pow, 10);
+     const parsedNum = parseInt(num, 10);
+     const parsedPow = parseInt(pow, 10);
     if (
-        typeof num !== 'number' ||
-        isNaN(num) ||
-        typeof pow !== 'number' ||
-        isNaN(pow)
+        typeof parsedNum !== 'number' ||
+        isNaN(parsedNum) ||
+        typeof parsedPow !== 'number' ||
+        isNaN(parsedPow)
     ) {
         return 'помилка';
     }
-    return Math.pow(num, pow);
+    return Math.pow(parsedNum, parsedPow);
 
 }
 
