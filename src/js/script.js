@@ -1,49 +1,25 @@
 'use strict';
 
+function padString(str, length, char, right = true) {
+	if(typeof str!== 'string') throw new Error ('Str arg should be a string');
+	if(typeof length !== 'number' || isNaN(length)) throw new Error ('Length should be a valid number and not a NaN');
 
-function repeatCharacter(character, times) {
-    let result = '';
-    for (let i = 0; i < times; i++) {
-        result += character;
-    }
-    return result;
-}
-
-function padString(value, length, char, appendSide = false) {
-    if (value == undefined) {
-        return `Помилка, відсутній аргумент номер 1`;
-    }
-    if (length == undefined) {
-        return `Помилка, відсутній аргумент номер 2`;
-    }
-    if (char == undefined) {
-        return `Помилка, відсутній аргумент номер 3`;
-    }
-    if (appendSide == undefined) {
-        return `Помилка, відсутній аргумент номер 4`;
-    }
-    if (typeof appendSide !== 'boolean') {
-        return 'Помилка, boolean тип має бути типу boolean';
-    }
-
-    let resultString = '';
+	if(typeof char !== 'string' || char.length !==1) throw new Error ('String should be a string with length = 1');
+	if(typeof right !== 'boolean') throw new Error ('Right should be a boolean');
 
 
-    if (value.length < length) {
-    	let paddingLength = length - value.length;
-    	const padding = repeatCharacter(char, paddingLength);
-    	resultString = appendSide ? padding + value : value + padding;
-    	return resultString;
-    }
-    if (length < value.length) {
-    	resultString = value.substr(0, length);
-    	return resultString;
-    }
-    return value;
+	const paddingLength = +length - str.length;
+	let resultString = '';
+	if (paddingLength >= 0) {
+		const padding = char.repeat(length - str.length);
+		resultString = right ? padding + str : str + padding;
+		return resultString;
+	}
+	return str.substr(0, str.length + paddingLength);
 }
 
 
-console.log(padString(111, 12));
+//console.log(padString(111, 12));
 console.log(padString('привіт', 8, '*'));
-console.log(padString('привіт', 7, '*', true));
+console.log(padString('привіт', 7, '*', false));
 console.log(padString('привіт', 6, '*'));
