@@ -1,9 +1,9 @@
 'use strict';
 
 const age = +prompt('Ваш вік?');
-const inRange = !(isNaN(age) || age > 130 || age <= 0);
+const isValidAge = !Number.isNaN(age) && age >= 1 && age <= 130;
 
-if (inRange) {
+if (isValidAge) {
     let suffix = 'років';
 
     if (age % 100 < 11 || age % 100 > 14) {
