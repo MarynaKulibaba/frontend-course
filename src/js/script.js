@@ -3,7 +3,7 @@
 const arr = [1, 2, 3, -1, -2, -3];
 
 function isValidArray(arr) {
-    return Array.isArray(arr) && arr.length > 0 ? arr : null;
+    return Array.isArray(arr) && arr.length > 0;
 }
 
 function getPositiveNumbers(array) {
