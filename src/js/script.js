@@ -9,6 +9,7 @@ for (let i = min; i < max - min + 1; i++) {
 }
 
 let indexOfLastShuffledNumber = shuffledNumbers.length - 1;
+
 const getUniqueRandomNumbers = function (){
     const randomIndex = Math.floor(Math.random() * indexOfLastShuffledNumber);
     const random = shuffledNumbers[randomIndex];
