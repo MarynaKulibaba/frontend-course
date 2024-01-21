@@ -1,6 +1,6 @@
 'use strict';
 
-const arr = [1, 2, 3, -1, -2, -3];
+const arr = [1, 2, 3, -1, -2, -3, -0];
 
 function isValidArray(arr) {
     return Array.isArray(arr) && arr.length > 0;
@@ -15,7 +15,7 @@ function getPositiveNumbers(array) {
     }
 
     for (let i = 0; i < array.length; i++) {
-        if (array[i] >= 0) {
+        if (array[i] > 0 || array[i] === 0 && !Object.is(array[i], -0)) {
             arrPositiveNum.push(array[i]);
         }
     }
