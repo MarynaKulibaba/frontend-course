@@ -1,7 +1,20 @@
 'use strict';
 
-const min = 0;
+const usedNumbers = []
+
+const randomNumber = function() {
+    const randomNumberResult = Math.floor(Math.random() * 100)
+    if (usedNumbers.includes(randomNumberResult)) return randomNumber()
+    usedNumbers.push(randomNumberResult)
+    return randomNumberResult
+}
+
+for (let i = 0; i <= 100; i+=1) console.log(randomNumber());
+
+
+/*const min = 0;
 const max = 100;
+
 const shuffledNumbers = [];
 
 for (let i = min; i < max - min + 1; i++) {
@@ -21,4 +34,6 @@ const getUniqueRandomNumbers = function (){
     return random;
 }
 
-for (let i = 0; i <= 100; i++) console.log(getUniqueRandomNumbers());
+for (let i = 0; i <= 100; i++) console.log(getUniqueRandomNumbers());*/
+
+
