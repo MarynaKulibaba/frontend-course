@@ -12,6 +12,7 @@ const randomNumber = function() {
 for (let i = 0; i <= 100; i+=1) console.log(randomNumber());
 
 
+
 /*const min = 0;
 const max = 100;
 
