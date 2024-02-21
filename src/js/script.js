@@ -1,3 +1,4 @@
+// 1
 const products = {
   item1: { name: 'T-shirt', price: 299 },
   item2: { name: 'Jeans', price: 599 },
@@ -25,3 +26,15 @@ const sellOut = (obj, discount) => {
 console.log(products)
 const warehouseInHolliday = sellOut(products, 10)
 console.log('Cristmass discount', warehouseInHolliday)
+
+// 2
+const students = [
+  { name: 'John', grade: 85 },
+  { name: 'Emily', grade: 92 },
+  { name: 'Michael', grade: 78 },
+  { name: 'Sarah', grade: 95 },
+  { name: 'William', grade: 88 },
+]
+const filter = (arr) => arr.filter((elem) => elem.grade > 90)
+console.log(students)
+console.log(filter(students))
