@@ -9,8 +9,8 @@
     },
     "rules": {
         "func-style": ["error", "expression"],
-        "object-shorthand": "off",
-        "func-names": "off"
+        "func-names": ["error", "as-needed"],
+        "object-shorthand": "off"
     }
 }
 
