@@ -1,3 +1,10 @@
 * {
     box-sizing: border-box;
 }
+
+.block {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
