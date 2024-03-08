@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-<<label for="numberInput">Введіть число:</label>
+<label for="input">Введіть число:</label>
 <input type="text" id="input">
-<button onclick='checkNumber()'>Перевірити</button>
+<button onclick='checkNumber(input); input.value = "";'>Перевірити</button>
 <script src="./js/script.js"></script>
 </body>
 </html>
