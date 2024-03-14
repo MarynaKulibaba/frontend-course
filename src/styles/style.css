@@ -1,3 +1,14 @@
 * {
     box-sizing: border-box;
 }
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 250px;
+    margin: 0 auto;
+    /*border: 1px solid grey;*/
+}
+label {
+    display: block;
+}
