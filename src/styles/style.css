@@ -12,3 +12,21 @@ form {
 label {
     display: block;
 }
+
+.require {
+    color: maroon;
+    font-size: 0.5rem;
+}
+
+.message {
+    visibility: hidden;
+}
+
+.message.error {
+    color: red;
+    visibility: visible;
+}
+.message.success {
+    color: green;
+    visibility: visible;
+}
