@@ -8,11 +8,11 @@
 <body>
 <h1>Опитування</h1>
 <form id="survey-form">
-    <label for="surveyName">Введіть ваше питання:</label>
+    <label for="surveyName">Введіть ваше питання:<sup><span class="require">*</span></sup></label>
     <input type="text" id="surveyName" required>
     <div id="optionInputs">
         <div class="option-inputs">
-            <label for="option1">Варіант відповіді 1:</label>
+            <label for="option1">Варіант відповіді 1:<sup><span class="require">*</span></sup></label>
             <input type="text" id="option1" required>
         </div>
        <!-- <div class="option-inputs">
@@ -26,6 +26,12 @@
     <button type="button" class="add-btn-option">Додати варіант відповіді</button>
     <button type="button" class="create-btn-survey">Створити опитування</button>
 </form>
+
+<div id="surveyResult">
+    <h2>Інформація про опитування:</h2>
+    <p id="surveyNameResult"></p>
+    <ol id="optionsResult"></ol>
+</div>
 <script src="./js/script.js"></script>
 </body>
 </html>

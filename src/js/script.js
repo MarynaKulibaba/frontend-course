@@ -28,11 +28,28 @@ addButton.addEventListener('click', addOption)
 const createSurvey = () => {
   const optionInputs = document.getElementById('optionInputs')
   const surveyNameInput = document.getElementById('surveyName')
-  if (
-    surveyNameInput.validity.valueMissing &&
-    optionInputs.children.length < 2
-  ) {
-    console.log('не заповнен імя та менше 2')
+  const message = document.querySelector('.message')
+  if (surveyNameInput.validity.valueMissing) {
+    message.classList.remove('success')
+    message.classList.add('error')
+    message.innerText = 'Будь ласка, введіть назву опитування'
+  } else if (optionInputs.children.length < 2) {
+    message.classList.remove('success')
+    message.classList.add('error')
+    message.innerText = 'Додайте принаймні два варіанти відповідей'
+  } else {
+    const surveyResult = document.getElementById('surveyResult')
+    surveyResult.style.display = 'block'
+    const surveyNameResult = document.getElementById('surveyNameResult')
+    const optionsResult = document.getElementById('optionsResult')
+    surveyNameResult.textContent = `Питання: ${surveyForm.elements[0].value}`
+
+    const arrInput = Array.from(optionInputs.getElementsByTagName('input'))
+    arrInput.forEach((item) => {
+      const li = document.createElement('li')
+      li.textContent = item.value
+      optionsResult.append(li)
+    })
   }
 }
 
