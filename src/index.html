@@ -7,18 +7,19 @@
 </head>
 <body>
 <h1>Опитування</h1>
-<form>
+<form id="survey-form">
     <label for="surveyName">Введіть ваше питання:</label>
-    <input type="text" id="surveyName">
+    <input type="text" id="surveyName" required>
     <div id="optionInputs">
         <div class="option-inputs">
             <label for="option1">Варіант відповіді 1:</label>
             <input type="text" id="option1" required>
         </div>
-        <div class="option-inputs">
+       <!-- <div class="option-inputs">
             <label for="option2">Варіант відповіді 2:</label>
             <input type="text" id="option2" required>
         </div>
+        -->
     </div>
 
     <button type="button" class="add-btn-option">Додати варіант відповіді</button>
