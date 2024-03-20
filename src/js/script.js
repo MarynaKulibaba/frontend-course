@@ -37,7 +37,9 @@ const items = []
 
 const render = () => {
   // render items into container, use todoItemTemplate
-  for (let item of items) console.log(item)
+  for (let item of items) {
+    console.log(item)
+  }
 }
 
 const addTodo = (text) => {
