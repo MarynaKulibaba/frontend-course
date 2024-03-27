@@ -1,8 +1,5 @@
-function isFunction(functionToCheck) {
-  return (
-    functionToCheck && {}.toString.call(functionToCheck) === '[object Function]'
-  )
-}
+const isFunction = (functionToCheck) =>
+  functionToCheck && {}.toString.call(functionToCheck) === '[object Function]'
 
 const pipe = (value, ...funcs) => {
   if (!funcs.length) {
