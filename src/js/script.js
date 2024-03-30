@@ -29,6 +29,7 @@ const container = document.getElementById('container')
 const btnAddTask = document.getElementById('addTask')
 const inputValue = document.getElementById('task-input')
 const todoItemTemplate = document.getElementById('todo-item')
+// const todoItemsContainer = document.getElementById('todo-items')
 
 // 1. Use templates
 // 2. "Modules": manager, editor, item(s) editor
@@ -40,12 +41,27 @@ const render = () => {
   for (let item of items) {
     console.log(item)
   }
+
+  if (!todoItemTemplate) {
+    console.error('Елемент з id="todo-item" не знайдено')
+    return
+  }
+
+  const clone = document.importNode(todoItemTemplate.content, true)
+  const inputElement = clone.querySelector('.form-control')
+  inputElement.value = inputValue.value
+  container.append(clone)
 }
 
 const addTodo = (text) => {
   items.push({ text: text, done: false })
   render()
 }
+
+btnAddTask.addEventListener('click', (e) => {
+  addTodo(inputValue.value)
+  inputValue.value = ''
+})
 
 // manager
 //  - render
@@ -55,8 +71,3 @@ const addTodo = (text) => {
 // editor
 //  - validate
 //  - add to manager
-
-btnAddTask.addEventListener('click', (e) => {
-  addTodo(inputValue.value)
-  inputValue.value = ''
-})
