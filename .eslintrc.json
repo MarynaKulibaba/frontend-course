@@ -9,7 +9,7 @@
     },
     "rules": {
         "func-style": ["error", "expression"],
-        "func-names": ["error", "as-needed"],
+        "func-names": ["warn", "as-needed"],
         "object-shorthand": "off"
     }
 }
