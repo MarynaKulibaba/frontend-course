@@ -8,7 +8,7 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        "func-style": ["error", "expression"],
+        "func-style": ["warn", "expression"],
         "func-names": ["error", "as-needed"],
         "object-shorthand": "off"
     }
