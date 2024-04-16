@@ -40,7 +40,7 @@ function Student(fname, lname, yearOfBirth) {
 
   // поставити оцінку за урок
   this.setGrade = function (grade) {
-    if (indexOfLesson >= lessonsCount) {
+    if (indexOfLesson > lessonsCount) {
       throw new Error('Reached maximum of lessons')
     }
     if (typeof attendances[indexOfLesson] === 'undefined') {
@@ -90,9 +90,19 @@ Student.prototype.absent = function () {
 }
 
 const student1 = new Student('Aurelia', 'Blackwood', 1900)
+const student2 = new Student('Phoenix', 'Frost', 2000)
 
-student1.present()
-student1.present()
-student1.present()
-student1.setGrade(8)
-console.log(student1.summary())
+for (let i = 0; i <= 25; i += 1) {
+  student1.present()
+  student1.setGrade(75)
+}
+
+student2.present()
+student2.absent()
+
+student2.setGrade(8)
+student2.setGrade(95)
+
+// Виводимо резюме для кожного студента
+console.log(`${student1.fname} ${student1.lname}: ${student1.summary()}`)
+console.log(`${student2.fname} ${student2.lname}: ${student2.summary()}`)
