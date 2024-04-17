@@ -49,6 +49,9 @@ function Student(fname, lname, yearOfBirth) {
     if (!attendances[indexOfLesson]) {
       throw new Error('Impossible grade of missed lesson')
     }
+    if (grades[indexOfLesson]) {
+      throw new Error('Impossible override grade')
+    }
     if (typeof grade !== 'number' || (grade < 0 && grade > 100)) {
       throw new Error('Grade should be number type, between 0 and 100')
     }
@@ -98,11 +101,10 @@ for (let i = 0; i <= 25; i += 1) {
 }
 
 student2.present()
-student2.absent()
+// student2.absent()
 
 student2.setGrade(8)
-student2.setGrade(95)
+// student2.setGrade(95)
 
-// Виводимо резюме для кожного студента
 console.log(`${student1.fname} ${student1.lname}: ${student1.summary()}`)
 console.log(`${student2.fname} ${student2.lname}: ${student2.summary()}`)
