@@ -3,7 +3,6 @@ import jsonData from './data.js'
 function* iterateObject(usersData) {
   for (let i = 0; i < usersData.length; i += 1) {
     for (const key in usersData[i]) {
-      // console.log(typeof usersData[i][key])
       if (typeof usersData[i][key] !== 'object') {
         yield {
           [key]: usersData[i][key],
