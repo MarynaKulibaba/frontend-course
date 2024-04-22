@@ -1,25 +1,23 @@
-let index = 0
 const iterateArray = (arr) => {
+  let index = 0
   return {
     next: function () {
+      let result = { done: true }
       if (index < arr.length) {
-        return {
+        result = {
           value: arr[index],
           done: false,
         }
+        index += 1
       }
-      return {
-        done: true,
-      }
+      return result
     },
   }
 }
 const arrayIterator = iterateArray([11, 12, 13])
+
 // let result = arrayIterator.next()
 console.log(arrayIterator.next())
-index += 1
 console.log(arrayIterator.next())
-index += 1
 console.log(arrayIterator.next())
-index += 1
 console.log(arrayIterator.next())
