@@ -42,5 +42,5 @@ const obj = {
   y: 20,
 }
 Object.freeze(obj)
-obj.x = 15 // // Throws an error in strict mode: [Uncaught TypeError: Cannot assign to read only property 'x' of object '#<Object>']
+obj.x = 15 // Throws an error in strict mode: [Uncaught TypeError: Cannot assign to read only property 'x' of object '#<Object>']
 console.log(obj.x) // Output: 10
