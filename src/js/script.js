@@ -13,12 +13,6 @@ function* iterateObject(usersData) {
 }
 const generator = iterateObject(jsonData)
 // console.log(generator.next().value)
-// console.log(generator.next().value)
-// console.log(generator.next().value)
-// console.log(generator.next().value)
-// console.log(generator.next().value)
-// console.log(generator.next().value)
-// console.log(generator.next().value)
 
 const ul = document.createElement('ul')
 document.body.append(ul)
