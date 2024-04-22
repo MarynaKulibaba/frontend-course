@@ -16,7 +16,6 @@ const iterateArray = (arr) => {
 }
 const arrayIterator = iterateArray([11, 12, 13])
 
-// let result = arrayIterator.next()
 console.log(arrayIterator.next())
 console.log(arrayIterator.next())
 console.log(arrayIterator.next())
