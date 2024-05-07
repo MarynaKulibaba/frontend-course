@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+<form id="login-form">
+    <label for="name">Ім'я:<sup><span class="require">*</span></sup></label>
+        <input type="text" id="name" required>
+    <label for="email">Eлектронна пошта:<sup><span class="require">*</span></sup></label>
+        <input type="text" id="email" required>
+    <label for="pass">Пароль:<sup><span class="require">*</span></sup></label>
+        <input type="password" id="pass" required>
+    <div class="message"></div>
+    <button type="submit">Реєстрація</button>
+</form>
 
 <script src="./js/script.js"></script>
 </body>
