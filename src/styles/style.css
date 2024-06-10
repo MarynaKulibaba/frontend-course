@@ -1,3 +1,22 @@
 * {
     box-sizing: border-box;
 }
+
+.container {
+    width: 50%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#todo {
+    display: block;
+}
+
+#todo-items {
+    .todo-item.done {
+        input  {
+            text-decoration: line-through;
+            color: silver;
+        }
+    }
+}
