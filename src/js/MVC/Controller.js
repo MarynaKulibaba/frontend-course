@@ -12,7 +12,7 @@ const Controller = {
   formHandler() {
     const inputValue = document.getElementById('task-input').value
     if (!inputValue.trim()) return alert('Lack of data!')
-    const newTodo = Model.saveTodoItem(inputValue)
+    const newTodo = Model.addTodoItem(inputValue)
     View.render(Model.todos)
     document.getElementById('task-input').value = ''
   },

@@ -10,7 +10,7 @@ const Model = {
     localStorage.setItem(this.key, JSON.stringify(todoItemsArray))
   },
 
-  saveTodoItem(text) {
+  addTodoItem(text) {
     const todos = this.todos
     const newItem = {
       id: todos.length ? todos[todos.length - 1].id + 1 : 1,
